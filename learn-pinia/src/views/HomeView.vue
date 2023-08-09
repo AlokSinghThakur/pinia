@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <div class="count">{{ counter.count }}</div>
+    <Counter />
     <div class="button">
       <button @click="counter.increaseCount">+</button>
       <button @click="counter.decreaseCount">-</button>
@@ -17,6 +17,7 @@
 </template>
 
 <script setup>
+import Counter from "../components/Counter.vue";
 import { useCounterStore } from "../stores/counter";
 const counter = useCounterStore();
 </script>
